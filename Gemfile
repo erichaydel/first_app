@@ -4,11 +4,13 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', :group => [:development, :test] 
 
-group :production do 
-	gem 'thin' 
-	gem 'pg' 
+group :production, :staging do
+  gem "pg"
+end
+
+group :development, :test do
+  gem "sqlite3-ruby", :require => "sqlite3"
 end
 
 #Possibly needed for heroku
