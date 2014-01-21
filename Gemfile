@@ -11,6 +11,9 @@ group :production do
 	gem 'pg' 
 end
 
+#Possibly needed for heroku
+gem 'rails_12factor'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
